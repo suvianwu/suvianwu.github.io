@@ -192,10 +192,7 @@ a:focus-visible {
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  filter: grayscale(100%) contrast(1.03);
-  transition: filter .4s ease;
 }
-.hero-photo img:hover { filter: grayscale(0%); }
 
 /* ---------- sections ---------- */
 
