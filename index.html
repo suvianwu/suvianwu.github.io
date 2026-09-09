@@ -12,170 +12,196 @@
 <meta property="og:image" content="https://suvianwu.github.io/portrait.jpg" />
 <link rel="canonical" href="https://suvianwu.github.io/" />
 <link rel="icon" href="portrait.jpg" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="stylesheet" href="fonts/fonts.css" />
+<link rel="stylesheet" href="styles.css?v=5" />
 </head>
-<body>
+<body class="page-home">
+<div class="site-chrome">
 
-<nav class="topbar">
-  <div class="topbar-in">
-    <a class="brand" href="#top">Suwan Wu</a>
-    <ul class="navlinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header id="top" class="hero">
-  <div class="hero-in">
-    <div class="hero-text">
-      <h1>Suwan Wu</h1>
-      <p class="role">AI Researcher · Xiaohongshu · previously TikTok</p>
-      <p class="lede">I work on language models, multimodal systems, and agentic learning.</p>
-      <p class="sub">
-        My recent work focuses on how large models acquire domain knowledge, improve through
-        post-training, and learn to act — applied to business risk control at production scale.
-      </p>
-      <ul class="links">
-        <li><a href="mailto:suzywusuwan@gmail.com">Email</a></li>
-        <li><a href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">Scholar</a></li>
-        <li><a href="https://github.com/suvianwu">GitHub</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="#top">Suwan Wu</a>
+      <nav class="site-nav site-nav--desktop">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <details class="mobile-nav">
+        <summary aria-label="Menu"><span></span><span></span><span></span></summary>
+        <nav class="mobile-nav__panel">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
     </div>
-    <div class="hero-photo">
-      <img src="portrait.jpg" alt="Portrait of Suwan Wu" width="720" height="720" />
-    </div>
-  </div>
-</header>
+  </header>
 
-<main>
+  <main class="site-main" id="top">
+    <div class="page-shell">
 
-  <section id="about" class="band">
-    <div class="col">
-      <h2>About</h2>
-      <div class="prose">
-        <p>
-          I am an AI researcher at Xiaohongshu, previously at TikTok. My work lives where research
-          meets production: business risk control, where mistakes are expensive, adversaries adapt,
-          and decisions have to hold up at scale.
-        </p>
-        <p>
-          For years that domain ran on feature engineering and supervised deep models. My recent work
-          moves it onto large-model foundations — not by swapping in a bigger classifier, but by
-          rebuilding the stack: what the model is trained on, how it is adapted to a domain, and how
-          it keeps improving after deployment.
-        </p>
-        <p>
-          The question I keep returning to: how does a model go from scoring inputs to reasoning
-          about them, acting on them, and getting better through that interaction? That question sits
-          behind my interest in continued pre-training, mid-training, post-training, agentic RL, and
-          recursive self-improvement.
-        </p>
-      </div>
-    </div>
-  </section>
+      <section class="hero">
+        <div class="hero__grid">
+          <div class="hero__portrait">
+            <div class="portrait-frame">
+              <img src="portrait.jpg" alt="Portrait of Suwan Wu" width="720" height="900" />
+            </div>
+          </div>
+          <div class="hero__content">
+            <h1 class="hero__name">Suwan Wu</h1>
+            <p class="hero__eyebrow">AI Researcher · Xiaohongshu · previously TikTok</p>
+            <p class="hero__lead">
+              I work on language models, multimodal systems, and agentic learning.
+            </p>
+            <p class="hero__summary">
+              My recent work focuses on how large models acquire domain knowledge, improve through
+              post-training, and learn to act — applied to business risk control at production scale.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="mailto:suzywusuwan@gmail.com">Email</a>
+              <a class="button button--secondary" href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">Google Scholar</a>
+              <a class="button button--ghost" href="https://github.com/suvianwu">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section id="research" class="band band-wide">
-    <div class="col col-wide">
-      <h2>Research</h2>
-
-      <div class="qgrid">
-      <article class="q">
-        <span class="num">01</span>
-        <h3>How do you teach a general model a domain it has never seen?</h3>
-        <p>
-          Risk and safety domains carry knowledge no public corpus contains: adversarial patterns,
-          platform-specific semantics, shifting policy boundaries. I work on continued pre-training
-          and mid-training as the stage where that knowledge actually enters the model, rather than
-          being bolted on through prompts.
-        </p>
-        <ul class="works">
-          <li>
-            <p class="meta">Work in progress · Continued Pre-Training / Mid-Training</p>
-            <p class="wtitle">Domain-adaptive training for large models in trust &amp; safety</p>
-          </li>
-        </ul>
-      </article>
-
-      <article class="q">
-        <span class="num">02</span>
-        <h3>What makes post-training produce real capability, not just better manners?</h3>
-        <p>
-          Post-training is where behavior is decided. I am interested in the alignment and
-          reinforcement-learning recipes that move measurable capability — reward design that
-          survives contact with messy production signals, and pipelines stable enough to run
-          more than once.
-        </p>
-        <ul class="works">
-          <li>
-            <p class="meta">Work in progress · Post-Training / Agentic RL</p>
-            <p class="wtitle">Reinforcement learning for agents that act under real-world constraints</p>
-          </li>
-        </ul>
-      </article>
-
-      <article class="q">
-        <span class="num">03</span>
-        <h3>Can a system improve itself once it is already running?</h3>
-        <p>
-          Static models decay; adversaries do not. I work on agentic learning and recursive
-          self-improvement — systems that use tools, observe outcomes, and fold that feedback back
-          into their own training loop instead of waiting for the next manual refresh.
-        </p>
-        <ul class="works">
-          <li>
-            <p class="meta">Work in progress · Agentic Learning / RSI</p>
-            <p class="wtitle">Self-improving loops for deployed agentic systems</p>
-          </li>
-        </ul>
-      </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications" class="band">
-    <div class="col">
-      <h2>Earlier publications</h2>
-      <ul class="pubs">
-        <li>
-          <p class="meta">2021 · PSGEC</p>
-          <p class="wtitle">
-            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=OMdC6dEAAAAJ&amp;citation_for_view=OMdC6dEAAAAJ:u5HHmVD_uO8C">Ultra-short-term wind energy prediction based on wavelet denoising and multivariate LSTM</a>
+      <section class="content-section" id="about">
+        <div class="section-heading">
+          <p class="section-kicker">About</p>
+          <h2>Research meets production</h2>
+        </div>
+        <div class="statement">
+          <p class="statement__lede">
+            I am an AI researcher at Xiaohongshu, previously at TikTok.
           </p>
-          <p class="authors">S Wu, L Jia, Y Liu</p>
-        </li>
-        <li>
-          <p class="meta">2021 · PSGEC</p>
-          <p class="wtitle">
-            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=OMdC6dEAAAAJ&amp;citation_for_view=OMdC6dEAAAAJ:u-x6o8ySG0sC">Optimization of Energy Sub Hub with Wind Power and Demand Response</a>
+          <p>
+            My work lives in business risk control — a domain where mistakes are expensive,
+            adversaries adapt, and decisions have to hold up at scale. For years it ran on feature
+            engineering and supervised deep models.
           </p>
-          <p class="authors">Y Liu, L Jia, S Wu</p>
-        </li>
-      </ul>
-      <p class="meta">
-        Full list on <a href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">Google Scholar</a>.
-      </p>
+          <p>
+            My recent work moves it onto large-model foundations: not by swapping in a bigger
+            classifier, but by rebuilding the stack — what the model is trained on, how it is adapted
+            to a domain, and how it keeps improving after deployment.
+          </p>
+          <p>
+            The question I keep returning to: how does a model go from scoring inputs to reasoning
+            about them, acting on them, and getting better through that interaction?
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="research">
+        <div class="section-heading">
+          <p class="section-kicker">Research</p>
+          <h2>Three questions I work on</h2>
+          <p class="section-subtitle">
+            Continued pre-training, mid-training, post-training, agentic RL, and recursive
+            self-improvement — grounded in systems that run in production.
+          </p>
+        </div>
+        <div class="theme-grid">
+          <article class="theme-card">
+            <span class="theme-card__index">01</span>
+            <h3>How do you teach a general model a domain it has never seen?</h3>
+            <p>
+              Risk and safety domains carry knowledge no public corpus contains: adversarial
+              patterns, platform-specific semantics, shifting policy boundaries. I work on continued
+              pre-training and mid-training as the stage where that knowledge actually enters the
+              model, rather than being bolted on through prompts.
+            </p>
+            <div class="tag-list">
+              <span>Continued Pre-Training</span><span>Mid-Training</span>
+            </div>
+          </article>
+          <article class="theme-card">
+            <span class="theme-card__index">02</span>
+            <h3>What makes post-training produce real capability?</h3>
+            <p>
+              Post-training is where behavior is decided. I am interested in the alignment and
+              reinforcement-learning recipes that move measurable capability — reward design that
+              survives contact with messy production signals, and pipelines stable enough to run
+              more than once.
+            </p>
+            <div class="tag-list">
+              <span>Post-Training</span><span>Agentic RL</span>
+            </div>
+          </article>
+          <article class="theme-card">
+            <span class="theme-card__index">03</span>
+            <h3>Can a system improve itself once it is already running?</h3>
+            <p>
+              Static models decay; adversaries do not. I work on agentic learning and recursive
+              self-improvement — systems that use tools, observe outcomes, and fold that feedback
+              back into their own training loop instead of waiting for the next manual refresh.
+            </p>
+            <div class="tag-list">
+              <span>Agentic Learning</span><span>RSI</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="publications">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="section-kicker">Publications</p>
+            <h2>Selected work</h2>
+          </div>
+          <a class="text-link" href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">All on Google Scholar →</a>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-card__meta">2021 · PSGEC</div>
+            <h3>Ultra-short-term wind energy prediction based on wavelet denoising and multivariate LSTM</h3>
+            <p>S Wu, L Jia, Y Liu</p>
+            <div class="work-card__links">
+              <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=OMdC6dEAAAAJ&amp;citation_for_view=OMdC6dEAAAAJ:u5HHmVD_uO8C">Scholar</a>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-card__meta">2021 · PSGEC</div>
+            <h3>Optimization of Energy Sub Hub with Wind Power and Demand Response</h3>
+            <p>Y Liu, L Jia, S Wu</p>
+            <div class="work-card__links">
+              <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=OMdC6dEAAAAJ&amp;citation_for_view=OMdC6dEAAAAJ:u-x6o8ySG0sC">Scholar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="contact">
+        <div class="section-heading">
+          <p class="section-kicker">Contact</p>
+          <h2>Get in touch</h2>
+        </div>
+        <div class="contact-panel">
+          <p class="contact-copy">
+            Open to research discussion and collaboration on language models, agentic systems,
+            and applied trust &amp; safety.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:suzywusuwan@gmail.com">suzywusuwan@gmail.com</a>
+            <a href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">Google Scholar</a>
+            <a href="https://github.com/suvianwu">GitHub</a>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </main>
 
-  <section id="contact" class="band">
-    <div class="col">
-      <h2>Contact</h2>
-      <p class="contact-line"><a href="mailto:suzywusuwan@gmail.com">suzywusuwan@gmail.com</a></p>
-      <p class="meta">Open to research discussion and collaboration.</p>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>© <span id="year"></span> Suwan Wu</span>
+      <span>Shanghai, China</span>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer>
-  <div class="col">
-    <p>© <span id="year"></span> Suwan Wu</p>
-  </div>
-</footer>
-
+</div>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
