@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Suwan Wu (巫苏皖)</title>
+<meta name="description" content="Suwan Wu — AI Researcher at Xiaohongshu, previously TikTok. Language models, multimodal systems, and agentic learning." />
+<meta property="og:title" content="Suwan Wu (巫苏皖)" />
+<meta property="og:description" content="AI Researcher working on language models, multimodal systems, and agentic learning." />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://suvianwu.github.io/" />
+<link rel="canonical" href="https://suvianwu.github.io/" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="wrap">
+  <h1 class="name">Suwan Wu <span class="zh">巫苏皖</span></h1>
+  <p class="role">AI Researcher · Xiaohongshu · previously TikTok</p>
+  <p class="lede">
+    I work on language models, multimodal systems, and agentic learning.
+  </p>
+  <p class="sub">
+    My work sits in industrial trust &amp; safety: replacing classical machine-learning
+    and deep-learning risk pipelines with large-model-native systems. Recently I focus on
+    continued pre-training, mid-training, post-training, agentic RL, and recursive self-improvement.
+  </p>
+  <nav class="links">
+    <a href="mailto:suzywusuwan@gmail.com">Email</a>
+    <a href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">Scholar</a>
+    <a href="https://github.com/suvianwu">GitHub</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>About</h2>
+    <p>
+      I am an AI researcher at Xiaohongshu, previously at TikTok. My work lives where
+      research meets production: business risk control, where mistakes are expensive,
+      adversaries adapt, and decisions have to hold up at scale.
+    </p>
+    <p>
+      For years that domain ran on feature engineering and supervised deep models.
+      I have spent my recent work moving it onto large-model foundations — not by
+      swapping in a bigger classifier, but by rebuilding the stack: what the model is
+      trained on, how it is adapted to a domain, and how it keeps improving after
+      deployment.
+    </p>
+    <p>
+      The question I keep returning to: how does a model go from scoring inputs to
+      reasoning about them, acting on them, and getting better through that interaction?
+    </p>
+  </section>
+
+  <section>
+    <h2>Research</h2>
+
+    <ol class="research">
+      <li>
+        <span class="num">01</span>
+        <h3>How do you teach a general model a domain it has never seen?</h3>
+        <p>
+          Risk and safety domains carry knowledge that no public corpus contains:
+          adversarial patterns, platform-specific semantics, shifting policy boundaries.
+          I work on continued pre-training and mid-training as the stage where that
+          knowledge actually enters the model, rather than being bolted on through prompts.
+        </p>
+        <ul class="works">
+          <li>
+            <p class="meta">Work in progress · Continued Pre-Training / Mid-Training</p>
+            <p class="wtitle">Domain-adaptive training for large models in trust &amp; safety</p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <span class="num">02</span>
+        <h3>What makes post-training produce real capability, not just better manners?</h3>
+        <p>
+          Post-training is where behavior is decided. I am interested in the alignment and
+          reinforcement-learning recipes that move measurable capability — reward design
+          that survives contact with messy production signals, and training pipelines
+          stable enough to run more than once.
+        </p>
+        <ul class="works">
+          <li>
+            <p class="meta">Work in progress · Post-Training / Agentic RL</p>
+            <p class="wtitle">Reinforcement learning for agents that act under real-world constraints</p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <span class="num">03</span>
+        <h3>Can a system improve itself once it is already running?</h3>
+        <p>
+          Static models decay; adversaries do not. I work on agentic learning and
+          recursive self-improvement — systems that use tools, observe outcomes, and
+          fold that feedback back into their own training loop instead of waiting
+          for the next manual refresh.
+        </p>
+        <ul class="works">
+          <li>
+            <p class="meta">Work in progress · Agentic Learning / RSI</p>
+            <p class="wtitle">Self-improving loops for deployed agentic systems</p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Earlier publications</h2>
+    <ul class="works flat">
+      <li>
+        <p class="meta">2021 · PSGEC</p>
+        <p class="wtitle">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=OMdC6dEAAAAJ&amp;citation_for_view=OMdC6dEAAAAJ:u5HHmVD_uO8C">Ultra-short-term wind energy prediction based on wavelet denoising and multivariate LSTM</a>
+        </p>
+        <p class="authors">S Wu, L Jia, Y Liu</p>
+      </li>
+      <li>
+        <p class="meta">2021 · PSGEC</p>
+        <p class="wtitle">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=OMdC6dEAAAAJ&amp;citation_for_view=OMdC6dEAAAAJ:u-x6o8ySG0sC">Optimization of Energy Sub Hub with Wind Power and Demand Response</a>
+        </p>
+        <p class="authors">Y Liu, L Jia, S Wu</p>
+      </li>
+    </ul>
+    <p class="meta">
+      Full list on <a href="https://scholar.google.com/citations?user=OMdC6dEAAAAJ&amp;hl=en">Google Scholar</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:suzywusuwan@gmail.com">suzywusuwan@gmail.com</a>
+    </p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>© <span id="year"></span> Suwan Wu</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
