@@ -153,6 +153,7 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
 
 .portrait-frame img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center center;
